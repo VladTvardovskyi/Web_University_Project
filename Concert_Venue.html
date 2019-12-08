@@ -3,160 +3,52 @@
     <head>
         <meta charset="UTF-8">
         <title>
-            Concert Venue - Martin Garrix
+         Martin Garrix - Concert Venue
         </title>
-        <link rel="main page" href="xxx.html">
+        <link rel="main page" href="index.html">
+        <link rel="stylesheet" href="style_for_concert-venue.css">
         <link rel="textarea" href="text-field.js">
-        <style>
-        
-                h2{
-                color:black;
-                font-family:'Anton', sans-serif;
-                letter-spacing: 20px;
-                font-size: 40px
-                
-                }
-                .menu {
-                    list-style-type: none;
-                    padding-left: 300px;
-                    margin-left: 0;
-                    position: static;
-                    
-                    margin-top: -200px;
-                    }
-                .menu a {            
-                    text-decoration: none;
-                    font-family: sans-serif;
-                    color: white;
-                    display: inline-block;
-                    padding: 10px 150px 10px 20px;
-                    background-color: rgb(255, 20, 147);
-                    background: rgba(205, 214, 219, 0.3);
-                    
-                    
-                    }
-                    .menu a:hover{
-                        background-color: rgb(255, 20, 147);
-                    }
-                    .menu li {
-                    display: inline;
-                    margin-right: -5px;
-                    }
-        
-                    .menu li ul {
-                    position: absolute;
-                    width:160px;
-                    display: none;
-                    padding-left: 410px;
-        
-                    }
-                    .menu li:hover  ul{
-                    display: block;
-        
-        
-                    }
-                    #logo{
-                    width: 200px;
-                    height: 150px ;
-                    margin-left: 90px;
-                    margin-top: -55px;
-                    }
-                    .intro {
-                        background: #222 url(2000x1333.jpg) no-repeat center center;
-                        background-repeat: repeat-y, repeat-y;
-                        background-position: left, right;
-                        background-attachment: fixed, fixed;
-                        background-size: 1920px 1000px;
-                        padding: 290px 0 50px;
-                        position: relative;
-                        
-                        }
-                    footer{
-                    margin-top: 500px;
-                    }
-                    .custom_block{
-                        height: 1600px;
-                        width: 1400px;
-                        background-color: rgba(225, 225, 225,0.3);
-                        margin-left: 300px;
-                    }
-                    .hline { 
-                        width:1400px;
-                        height:3px;
-                        background: #FF1493;
-                         }
-                  
-                    .image{
-                        padding-left: 12px;
-                        height: 330px;
-                        width: 300px;
-                    }
-                    p{
-                        margin-top: -335px;
-                        margin-right: 100px;
-                        font-size: 150%;
-                        font-family: 'Anton', sans-serif;
-                        color:black;
-                    }
-                   
-                    * {
-                    box-sizing: border-box;
-                    }
-        
-                    .column {
-                    float: left;
-                    width: 33.33%;
-                    padding: 5px;
-                    }
-        
-                    .row::after {
-                    content: "";
-                    clear: both;
-                    display: table;
-                    }
-                    blockquote{
-                        margin-left: 100px;
-                    }
-                    .custom_footer_block{
-                        height: 50px;
-                        width: 1400px;
-                        background-color: rgba(225, 225, 225,0.3);
-                        margin-left: 300px;
-                    }   
-                    #map{
-                        height: 400px;  /* The height is 400 pixels */
-                        width: 100%;  /* The width is the width of the web page */
-                        }
-                        
-                </style>
-        </head>
-        <body class="intro" data-stellar-background-ratio="0.3" style="background-position: 0px -70px;">
-                <header>
-                   <nav>
-                    <img src="mmr.jpeg" align="left" id="logo">
-                        <div name="menus">
-                                
-                                     <ul class="menu" >
-                                      <li><a href="xxx.html">Main</a></li>
-                                      <li><a href="">News</a></li>
-                                      <li><a href="">For fans</a>
-                                       <ul >
-                                        <li><a href="" style="width:70px;">Fun club </a></li> 
-                                        <li><a href="Tour-schedulel.html" style="width:70px;">Tour schedule</a></li>
-                                        <li><a href=""style="width:70px;">Lyrics</a></li>
-                                       </ul>
-                                      </li>
-                                      <a href="">Fans appeal</a></li>
-                                      <li><a href="#">Concert Venue</a></li>
-                                      <li><a href="">Admin</a></li>
-                                     </ul>
-                                   </nav>
-                                   </div>
-                        </div>
-                </header>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+        <link rel='stylesheet prefetch'href='https://cdn.rawgit.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css'>
+    </head>
+    <body>
+    <body class="intro" data-stellar-background-ratio="0.3" style="background-position: 0px -70px;">
+        <header>
+        <nav  class="navbar sticky-top navbar-expand-lg " style="background-color: rgba(225, 225, 225,0.3);" id="navbar">
+                <a href="#" class="navbar-brand">
+            <img src="mmr.jpeg" width="48" height="50"  alt="logo">
+            </a>
+            <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div name="menus">
+                             <ul  class="nav justify-content-center mr-auto">
+                              <li  class="nav-item active"><a  class="nav-link" href="index.html">Main</a></li>
+                              <li  class="nav-item"><a  class="nav-link" href="news.html">News</a></li>
+                              <li  class="nav-item dropdown"><a  class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false" id="for_fans">For fans</a>
+                            <div class="dropdown-menu" id="dropdown" >
+                               <ul >
+                                <li><a class="dropdown-item  " href="#" style="width:130px;">Fun club </a></li> 
+                                <li><a class="dropdown-item " href="Tour-schedulel.html" style="width:130px;">Tour schedule</a></li>
+                                <li><a class="dropdown-item " href="#"style="width:130px;">Lyrics</a></li>
+                               </ul>
+                              <li class="nav-item">
+                              <a class="nav-link" href="fans-appeal.html">Fans appeal</a></li>
+                              <li class="nav-item"><a  class="nav-link"  href="Concert_Venue.html">Concert Venue</a></li>
+                              <li class="nav-item"><a class="nav-link"  href="admin.html">Admin</a></li>
+                            </ul>
+                           </div>
+                </div>
+            </div>
+        </nav>
+        </header>
                 <main>
                         <div class="custom_block" align="center">
-                            <h1 style="padding-top: 90px; font-family: 'Anton', sans-serif; font-size: 70px; ">
+                            <h1 style="padding-top: 90px; font-family: 'Anton', sans-serif; font-size: 70px; color:#000 ">
                                 The place of the next Concert
                             </h1>
                             <div class="hline" style="margin-bottom: 30px"></div>
@@ -193,7 +85,9 @@
             <footer class="custom_footer_block" align="center" style="font-family:'Squada One', cursive; ">
                 Copyright © 2019 Martin Garrix
             </footer>
-
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         </body>
     </head>
 </html>
