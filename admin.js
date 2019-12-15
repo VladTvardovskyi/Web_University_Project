@@ -1,4 +1,4 @@
-
+console.log(1);
 const realFileBtn = document.getElementById("real-file");
 const customBtn = document.getElementById("custom-button");
 const img = document.getElementById("img");
@@ -16,13 +16,27 @@ customBtn.addEventListener("click", function() {
     } 
   });
   
-  document.getElementById("send").addEventListener("click", sendNews);
-//   window.addEventListener("online", function (event) {
-//       const allNews = readNewsFromLocalStorage();
-//       sendNewsToServer(allNews);
-//       showAllNews(allNews);
-//       localStorage.removeItem("news");
-//   });
+  document.addEventListener("DOMContentLoaded", function() {
+    let allNews = [];
+
+
+        document.getElementById("send").addEventListener("click", sendNews);
+        window.addEventListener("online", function (event) {
+            provider.get("news", (news) => {
+                if(news){
+                    allNews = news;
+                }
+            sendNewsToServer(allNews);
+            provider.removeItem("news");
+            allNews = [];
+        });
+    });
+
+    provider.get("news", (news) =>{
+        if(news){
+            allNews = news;
+        }
+    });
 
 //   const allNews = readNewsFromLocalStorage();
 //   if(isOnline()){
@@ -43,43 +57,43 @@ customBtn.addEventListener("click", function() {
 //     }
 // }
 
-function sendNews() {     
+function sendNews() {
+     
+        // alert('News was sent');
     var txtVal1=document.getElementById('newsTitle').value;
     var txtVal2=document.getElementById('newsBody').value;
      if((!/\S/.test(txtVal1)) || (!/\S/.test(txtVal2))) {
         alert('Edit all fields please');
     }
     else{
-            
+    
+
     if (isOnline()) {
-        addNews(imgSrc, title, body);
+        alert("Successfully sent to server");
     } else {
-            let allNews = readNewsFromLocalStorage();
         allNews.push({imgSrc: img.src, title: txtVal1, body: txtVal2});
-        saveNewsToLocalStorage(allNews);
-        alert("Saved to local storage");
+        provider.add("news", allNews);
+        alert("Saved to storage");
+    
     }
     //   document.getElementById('form').reset();
      img.src="gettyimages-686157014-594x594.jpg";
 
-    } 
+    }
     function sendNewsToServer(allNews) {
         if (allNews.length) {
             alert("Successfully sent to server!")
         }
     }
     
-    function saveNewsToLocalStorage(allNews) {
-        localStorage.setItem("news", JSON.stringify(allNews));
-    }
+    // function saveNewsToLocalStorage(allNews) {
+    //     localStorage.setItem("news", JSON.stringify(allNews));
+    // }
     
-    function readNewsFromLocalStorage() {
-        return JSON.parse(localStorage.getItem("news")) != null
-            ? JSON.parse(localStorage.getItem("news")) : [];
-    }
-    
-    function isOnline() {
-        return window.navigator.onLine;
-    }
-
+    // function readNewsFromLocalStorage() {
+    //     return JSON.parse(localStorage.getItem("news")) != null
+    //         ? JSON.parse(localStorage.getItem("news")) : [];
+    // }
 }
+
+});

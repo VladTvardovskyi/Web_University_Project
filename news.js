@@ -1,16 +1,28 @@
-window.addEventListener("online", function (event) {
-    const allNews = readNewsFromLocalStorage();
-    sendNewsToServer(allNews);
-    showAllNews(allNews);
-    localStorage.removeItem("news");
-});
+document.addEventListener("DOMContentLoaded", function() {
+    let allNews = [];
 
-const allNews = readNewsFromLocalStorage();
-if (isOnline()) {
-    sendNewsToServer(allNews);
-    showAllNews(allNews);
-    localStorage.removeItem("news");
-}
+        window.addEventListener("online", function (event) {
+            provider.get("news", (news) => {
+                if(news){
+                    allNews = news;
+                }
+            sendNewsToServer(allNews);
+            showAllNews(allNews);
+            provider.remove("news");
+            allNews = [];
+        });
+    });
+        provider.get("news", (news) => {
+            if (news) {
+                allNews = news;
+            }
+        });
+        if(isOnline()){
+            sendNewsToServer(allNews);
+            showAllNews(allNews);
+            provider.remove("news");
+            allNews = [];
+        }
 
 function addNews(imgSrc, title, body){
     
@@ -21,23 +33,20 @@ function addNews(imgSrc, title, body){
    
 }
 
-function showAllNews(allNews) {
-    allNews.forEach(function (news) {
-        addNews(news.imgSrc, news.title, news.body)
-    });
-}
-
-function sendNewsToServer(allNews) {
-    if (allNews.length) {
-        alert("Successfully sent to server!")
+    function showAllNews(allNews) {
+        allNews.forEach(function (news) {
+            addNews(news.imgSrc, news.title, news.body)
+        });
     }
-}
 
-function readNewsFromLocalStorage() {
-    return JSON.parse(localStorage.getItem("news")) != null
-        ? JSON.parse(localStorage.getItem("news")) : [];
-}
+        function sendNewsToServer(allNews) {
+            if (allNews.length) {
+                alert("Successfully sent to server!")
+            }
+        }
 
-function isOnline() {
-    return window.navigator.onLine;
-}
+});
+
+// function isOnline() {
+//     return window.navigator.onLine;
+// }
