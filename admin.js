@@ -26,8 +26,8 @@ customBtn.addEventListener("click", function() {
                 if(news){
                     allNews = news;
                 }
-            sendNewsToServer(allNews);
-            provider.removeItem("news");
+            sendAllNewsToServer(allNews);
+            provider.remove("news");
             allNews = [];
         });
     });
@@ -70,6 +70,7 @@ function sendNews() {
 
     if (isOnline()) {
         alert("Successfully sent to server");
+        sendNewsToServer(img.src, txtVal1, txtVal2);
     } else {
         allNews.push({imgSrc: img.src, title: txtVal1, body: txtVal2});
         provider.add("news", allNews);
@@ -80,20 +81,22 @@ function sendNews() {
      img.src="gettyimages-686157014-594x594.jpg";
 
     }
-    function sendNewsToServer(allNews) {
-        if (allNews.length) {
-            alert("Successfully sent to server!")
+    function sendNewsToServer(imgSrc, title, body) {
+        fetch("/all_news", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({imgSrc: imgSrc, title: title, body: body}),
+        })
+            .catch(error => console.error("Cannot fetch data:", error));
+    }
+
+    function sendAllNewsToServer(allNews) {
+        for (let i = 0; i < allNews.length; i++) {
+            sendNewsToServer(allNews[i].imgSrc, allNews[i].title, allNews[i].body)
         }
     }
-    
-    // function saveNewsToLocalStorage(allNews) {
-    //     localStorage.setItem("news", JSON.stringify(allNews));
-    // }
-    
-    // function readNewsFromLocalStorage() {
-    //     return JSON.parse(localStorage.getItem("news")) != null
-    //         ? JSON.parse(localStorage.getItem("news")) : [];
-    // }
 }
 
 });

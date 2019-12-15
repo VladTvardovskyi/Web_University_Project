@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if(news){
                     allNews = news;
                 }
-            sendNewsToServer(allNews);
+            sendAllNewsToServer(allNews);
             showAllNews(allNews);
             provider.remove("news");
             allNews = [];
@@ -17,11 +17,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 allNews = news;
             }
         });
-        if(isOnline()){
-            sendNewsToServer(allNews);
-            showAllNews(allNews);
+       
+        if (isOnline()) {
+            sendAllNewsToServer(allNews);
             provider.remove("news");
             allNews = [];
+    
+            let req = new XMLHttpRequest();
+            req.open("GET", "/all_news", true);
+            req.send();
+            req.onreadystatechange = function() {
+                if (req.readyState === XMLHttpRequest.DONE) {
+                    if (req.status != 200) {
+                        console.log("Something goes wrong!");
+                    }
+                    else {
+                        let data = JSON.parse(req.responseText);
+                        showAllNews(data);
+                    }
+                }
+            };
         }
 
 function addNews(imgSrc, title, body){
@@ -34,19 +49,26 @@ function addNews(imgSrc, title, body){
 }
 
     function showAllNews(allNews) {
-        allNews.forEach(function (news) {
-            addNews(news.imgSrc, news.title, news.body)
-        });
+        for (let i = 0; i < allNews.length; i++) {
+            addNews(allNews[i].imgSrc, allNews[i].title, allNews[i].body);
+        }
     }
 
-        function sendNewsToServer(allNews) {
-            if (allNews.length) {
-                alert("Successfully sent to server!")
-            }
+    function sendNewsToServer(imgSrc, title, body) {
+        fetch("/all_news", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({imgSrc: imgSrc, title: title, body: body}),
+        })
+            .catch(error => console.error("Cannot fetch data:", error));
+    }
+
+    function sendAllNewsToServer(allNews) {
+        for (let i = 0; i < allNews.length; i++) {
+            sendNewsToServer(allNews[i].imgSrc, allNews[i].title, allNews[i].body)
         }
+    }
 
 });
-
-// function isOnline() {
-//     return window.navigator.onLine;
-// }
