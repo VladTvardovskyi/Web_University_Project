@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+         <link rel='stylesheet prefetch'href='https://cdn.rawgit.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css'>
+         <link rel="stylesheet" href="style.css">
+		 <link rel="textarea" href="text-field.js">
+        <title>
+            Martin Garrix - Official Page
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat|Squada+One&display=swap" rel="stylesheet">
+        <style>
+        
+        h2{
+        color:black;
+        font-family:'Anton', sans-serif;
+        letter-spacing: 20px;
+        font-size: 40px;
+        margin-bottom: 39px;
+        margin-top: 40px;
+        animation-duration: 1s;
+        animation-name: slidein ;
+        }
+        .menu {
+            list-style-type: none;
+            padding-left: 300px;
+            margin-left: 0;
+            animation-duration: 2s;
+       animation-name: swap ;
+            margin-top: -200px;
+            }
+        .menu a {            
+            text-decoration: none;
+            font-family: sans-serif;
+            color: white;
+            display: inline-block;
+            padding: 10px 150px 10px 20px;
+            background-color: rgb(255, 20, 147);
+            background: rgba(205, 214, 219, 0.3);
+            }
+            .menu a:hover{
+            background-color: rgb(255, 20, 147);
+            }
+            .menu li {
+            display: inline;
+            margin-right: -5px;
+            }
+            .menu li ul {
+            position: absolute;
+            width:160px;
+            display: none;
+            padding-left: 410px;
+            animation-duration: 2s;
+            animation-name: swap;
+            }
+            .menu li:hover  ul{
+            display: block;
+            }
+            .intro {
+            background: #222 url(2000x1333.jpg) no-repeat center center;
+            background-repeat: repeat-y, repeat-y;
+            background-position: left, right;
+            background-attachment: fixed, fixed;
+            background-size: 1920px 1000px;
+            padding: 290px 0 50px;
+            position: relative;
+            }
+            figure {
+            float: left;
+            width: 28%;
+            text-align: center;
+            font-style: sans-serif;
+            margin: 0.5em;
+            padding: 0.5em;
+            }
+            figcaption{
+            text-align: center;
+            padding-left: 150px;
+            }
+            footer{
+            margin-top: 500px;
+            }
+            .custom_block{
+            height: 1600px;
+            height: 100%;               
+            width: 100%;
+            min-width: 10px;
+            background-color: rgba(225, 225, 225,0.3);
+            position: relative;
+            overflow: hidden;
+            }
+            .hline { 
+            width: 100%;
+            height:3px;
+            background: #FF1493;
+            }
+            .image{
+            padding-left: 12px;
+            height: 330px;
+            width: 250px;
+            padding-top:25px;
+            }
+            .custom-toggler.navbar-toggler {
+            border-color:#FF1493;
+            }
+            .custom-toggler.navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+            }
+            .navbar {
+             background-color: transparent;
+             background: transparent;
+             border-color: transparent;
+            }
+            .navbar li { 
+                color: #000 ;
+            } 
+            * {
+            box-sizing: border-box;
+            }
+            .column {
+            width: 33.33%;
+            padding: 10px;
+            }
+            .custom_footer_block{
+                height: 30px;
+                width: 100%;
+                background-color: rgba(225, 225, 225,0.3);
+            }
+            @keyframes slidein  {
+                from {
+                 opacity:0;margin-right:  1000px; 
+                 }
+                 to {
+                 margin: 0; 
+                 }
+                 }
+             @keyframes swap  {
+
+                 0% {
+                 opacity:0;
+                margin-left:  0;
+                }
+                25% { 
+                 margin-left:  0; 
+                 }
+                50% { 
+                margin-left:  150px; 
+                }
+                100% {
+                 margin-left: 0; 
+                 }
+                }  
+                #navbar{
+                    /* padding-top :0;
+                    padding-bottom:0;  */
+                    width: 100%;
+                    /* margin-left: 15.79%; */
+                    margin-top: -290px;
+                    margin-bottom: 200px;
+                    }
+                #navbarSupportedContent a {
+                      
+                      text-decoration: none;
+                      font-family: sans-serif;
+                      color: white !important;
+                      display: inline-block;
+                      padding: 10px 20px 10px 20px;
+                      background-color: black!; 
+                      transition: 1s all;
+                    }
+                    #navbarSupportedContent a:hover{
+                    background: #FF1493;;
+                    padding: 10px,0px,10px,20px;
+                        }
+                    #dropdown{
+                    background-color:  rgba(225, 225, 225,0.3);
+                    }
+                    #for_fans{
+                        background-color: rgba(225, 225, 225, 0,3);
+                    }
+					.card{
+						/* width: 70%;
+						height: 160px; */
+						margin-left: 200px;
+						margin-right: 50px;
+						margin-top:100px;
+						border-color: black;
+					}
+					h1 {
+                    background-color: rgba(256,256,256,.03);
+                    background-image: -webkit-linear-gradient(top, #111, #0c0c0c);
+                    background-image: -moz-linear-gradient(top, #111, #0c0c0c);
+                    background-image: -ms-linear-gradient(top, #111, #0c0c0c);
+                    background-image: -o-linear-gradient(top, #111, #0c0c0c);
+                    font-size: 2em;
+                    font-family: 'Amethysta', serif;
+                    text-align: center;
+                    line-height: 1.4em;
+                    text-transform: uppercase;
+                    letter-spacing: .3em;
+                    white-space:nowrap;
+                    }
+					#span {
+                    color: #000;
+                    font-family: 'Caesar Dressing', cursive;
+                    font-size: 5em;
+                    text-transform: lowercase;
+                    vertical-align: middle;
+                    letter-spacing: .2em;
+                    }
+
+                    .fire {
+                    animation: animation 1s ease-in-out infinite alternate;
+                    -moz-animation: animation 1s ease-in-out infinite alternate;
+                    -webkit-animation: animation 1s ease-in-out infinite alternate;
+                    -o-animation: animation 1s ease-in-out infinite alternate;
+                    }
+
+                    .burn {
+                    animation: animation .65s ease-in-out infinite alternate;
+                    -moz-animation: animation .65s ease-in-out infinite alternate;
+                    -webkit-animation: animation .65s ease-in-out infinite alternate;
+                    -o-animation: animation .65s ease-in-out infinite alternate;
+                    }
+
+                    @keyframes animation
+                    {
+                    0% {text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #feec85,
+                    -20px -20px 40px #ffae34,
+                    20px -40px 50px #ec760c,
+                    -20px -60px 60px #cd4606,
+                    0 -80px 70px #973716,
+                    10px -90px 80px #451b0e;}
+                    100% {text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #fefcc9,
+                    -20px -20px 40px #feec85,
+                    22px -42px 60px #ffae34,
+                    -22px -58px 50px #ec760c,
+                    0 -82px 80px #cd4606,
+                    10px -90px 80px  #973716;}
+                    }
+
+                    @-moz-keyframes animation
+                    {
+                    0% {text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #feec85,
+                    -20px -20px 40px #ffae34,
+                    20px -40px 50px #ec760c,
+                    -20px -60px 60px #cd4606,
+                    0 -80px 70px #973716,
+                    10px -90px 80px #451b0e;}
+                    100% {text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #fefcc9,
+                    -20px -20px 40px #feec85,
+                    22px -42px 60px #ffae34,
+                    -22px -58px 50px #ec760c,
+                    0 -82px 80px #cd4606,
+                    10px -90px 80px  #973716;}
+                    }
+
+                    @-webkit-keyframes animation
+                    {
+                    0% {text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #feec85,
+                    -20px -20px 40px #ffae34,
+                    20px -40px 50px #ec760c,
+                    -20px -60px 60px #cd4606,
+                    0 -80px 70px #973716,
+                    10px -90px 80px #451b0e;}
+                    100% {text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #fefcc9,
+                    -20px -20px 40px #feec85,
+                    22px -42px 60px #ffae34,
+                    -22px -58px 50px #ec760c,
+                    0 -82px 80px #cd4606,
+                    10px -90px 80px  #973716;}
+                    }
+
+                    @-o-keyframes animation
+                    {
+                    0% {text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #feec85,
+                    -20px -20px 40px #ffae34,
+                    20px -40px 50px #ec760c,
+                    -20px -60px 60px #cd4606,
+                    0 -80px 70px #973716,
+                    10px -90px 80px #451b0e;}
+                    100% {text-shadow: 0 0 20px #fefcc9,
+                    10px -10px 30px #fefcc9,
+                    -20px -20px 40px #feec85,
+                    22px -42px 60px #ffae34,
+                    -22px -58px 50px #ec760c,
+                    0 -82px 80px #cd4606,
+                    10px -90px 80px  #973716;}
+                    }
+					/* @media (max-width: 480px) { */
+						.custom_block{
+					padding:0;
+      				margin:0;
+					}
+					body {
+      				padding:0;
+    				}
+
+					.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+					margin-left: 0;
+					margin-right: 0;
+					margin-bottom:0;
+					}
+					/* } */
+                    iframe{
+					width: 80%; 
+					height:  500px; 
+					padding-left:  23.5%;
+					padding-top: 100px;
+
+				}
+
+				.form-group{
+					width: 80%;
+					padding-left: 30%;
+					margin-left: 35%;
+					margin-top: 1%;
+					float: right;
+					padding-top: 40px;
+				}
+
+				button{
+					width: 20%;
+					margin-left: 20%;
+					margin-top:  50px;
+				}
+				
+				#send{
+					margin-top:13%;
+					position: absolute;
+                    background: rgb(7,205,37) !important;
+				}
+
+				textarea{
+					margin-top: 10px;
+				}
+			
+				.block{
+					/* border-top:  3px solid gray; */
+					width: 80%;
+					align-content: center; 
+					margin-left: 8%;
+					margin-top: 2%;
+
+				}
+				
+                pre{
+						float: left;
+						border: 1px solid white;
+						color: white;
+						text-align: center;
+						width: 100px;
+						/* margin-top: 25px; */
+						/* margin-left: 0.2%;
+						margin-right: 0.2%; */
+						position: relative;
+						/* padding: 5px; */
+						
+					
+					}
+					.coment{
+						/* border: 1px solid white; */
+                        background:#fefcc9;
+                        color:black;
+                        /* margin-left: 10%; */
+						/* margin-right: 3%; */
+						/* margin-top: 20%; */
+						position: relative;
+						/* padding: 5px; */
+					}
+                    #move{
+                        margin-left: 30%;
+                    }
+                   
+
+
+        </style>
+    </head>
+    <body>
+    <body class="intro" data-stellar-background-ratio="0.3" style="background-position: 0px -70px;">
+        <header>
+			
+        <nav  class="navbar sticky-top navbar-expand-lg " style="background-color: rgba(225, 225, 225,0.3);" id="navbar">
+                <a href="#" class="navbar-brand">
+            <img src="mmr.jpeg" width="48" height="50" style="margin-bottom: 20px" alt="logo">
+            </a>
+            <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div name="menus">
+                             <ul  class="nav justify-content-center mr-auto">
+                              <li  class="nav-item active"><a  class="nav-link" href="">Main</a></li>
+                              <li  class="nav-item"><a  class="nav-link" href="">News</a></li>
+                              <li  class="nav-item dropdown"><a  class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false" id="for_fans">For fans</a>
+                            <div class="dropdown-menu" id="dropdown" >
+                               <ul >
+                                <li><a class="dropdown-item  " href="#" style="width:130px;">Fun club </a></li> 
+                                <li><a class="dropdown-item " href="Tour-schedulel.html" style="width:130px;">Tour schedule</a></li>
+                                <li><a class="dropdown-item " href="#"style="width:130px;">Lyrics</a></li>
+                               </ul>
+                              <li class="nav-item">
+                              <a class="nav-link" href="">Fans appeal</a></li>
+                              <li class="nav-item"><a class="nav-link"  href="Concert_Venue.html">Concert Venue</a></li>
+                              <li class="nav-item"><a class="nav-link"  href="">Admin</a></li>
+                            </ul>
+                           </div>
+                </div>
+            </div>
+        </nav>
+        </header>
+		<main>
+			<div class="custom_block">
+					<link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet' type='text/css'>
+					<link href='https://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+					
+					<h1>FANS <span class="fire" id="span">M</span><span class="burn" id="span">G</span><span class="fire" id="span"></span>APPEAL </h1>
+			<div class="hline" style="margin-top:15px"></div><br><br><br>
+			
+        <div class="block">
+            <div claclass=" col-lg-2">
+            <pre align="center"  style="color:black; display:flex;">
+Fan name
+22:00  
+09.09.2019</pre>
+                </div>
+            
+            <div class="col-lg-10" >	
+                            <p align="center" class="coment" style="display: flex;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+                        n culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+            <br><br><br><br><br><br><br><div class="hline"></div><br><br><br>
+            <div class="block">
+                    <div claclass=" col-lg-2">
+                    <pre align="center"  style="color:black; display:flex;">
+Fan name
+22:00  
+09.09.2019</pre>
+                        </div>
+                    
+                    <div class=" col-lg-10" >	
+                                    <p align="center" class="coment" style="display: flex;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+                                n culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                    <br><br><br><br><br><br><br><div class="hline"></div><br><br><br>
+
+
+		<!-- <div class="hline" style="margin-top: 100px;"></div>
+		<br><br> -->
+		<h2>Write your appeal below....</h2>
+		<div align="center">
+		<a href="https://www.animatedimages.org/cat-arrows-111.htm"><img src="https://www.animatedimages.org/data/media/111/animated-arrow-image-0011.gif" border="0" alt="animated-arrow-image-0011" /></a>
+		<a href="https://www.animatedimages.org/cat-arrows-111.htm"><img src="https://www.animatedimages.org/data/media/111/animated-arrow-image-0011.gif" border="0" alt="animated-arrow-image-0011" style="margin-left:10px " /></a>
+		<a href="https://www.animatedimages.org/cat-arrows-111.htm"><img src="https://www.animatedimages.org/data/media/111/animated-arrow-image-0011.gif" border="0" alt="animated-arrow-image-0011"  style="margin-left:10px" /></a>
+		</div>
+        <br><br><br><br>
+        <div class="block">
+        <form>
+			<div class="form-group text-light" align ="center">
+			    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="  Write an appeal..."  rows="10" ></textarea>
+			  </div>
+            </form>
+        </div>
+		<!-- <textarea id="txtarea" style="height:300px; width: 600px; margin-left: 400px"></textarea> -->
+				<!-- <input type="button" value="SEND" id="add" style="background: rgb(7,205,37);
+				background: linear-gradient(56deg, rgba(7,205,37,1) 0%, rgba(255,0,194,1) 93%, rgba(46,0,255,1) 100%); margin-left: 340px;"> -->
+                <button type="button" class="btn btn-outline-light" align ="center" id="send">send</button>
+			</div>
+	  </div>
+	</div>	  
+	</main>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
